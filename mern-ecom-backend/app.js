@@ -14,19 +14,19 @@ const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
 const paymentRoutes = require("./routes/payment");
 
-mongoose
-  .connect(process.env.DATABASE, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  })
-  .then(() => {
-    console.log("db Connected");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// mongoose
+//   .connect(process.env.DATABASE, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true,
+//     useFindAndModify: false,
+//   })
+//   .then(() => {
+//     console.log("db Connected");
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -39,11 +39,7 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", paymentRoutes);
 
-// app.get("/", (req, res) => {
-//   res.send("Hey");
-// });
-
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Listening to port ${port}`);
+app.get("/", (req, res) => {
+  res.send("Hey");
 });
+
