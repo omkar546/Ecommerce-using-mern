@@ -39,8 +39,9 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", paymentRoutes);
 
-// app.get("/", (req, res) => {
-//   res.send("Hey");
+// const port = process.env.PORT || 5000;
+// app.listen(port, () => {
+//   console.log(`Listening to port ${port}`);
 // });
 
 const port = process.env.PORT || 5000;
