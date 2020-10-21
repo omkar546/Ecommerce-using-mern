@@ -14,19 +14,7 @@ const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
 const paymentRoutes = require("./routes/payment");
 
-// mongoose
-//   .connect(process.env.DATABASE, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//   })
-//   .then(() => {
-//     console.log("db Connected");
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+
 
 app.use(bodyParser.json());
 app.use(cookieParser());
